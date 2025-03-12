@@ -1,0 +1,258 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Couleur de fond claire */
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50; /* Couleur de fond du header */
+    color: white;
+    padding: 20px 0;
+    text-align: center; /* Centrer le contenu du header */
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+    text-align: center; /* Centrer le texte de h1 */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Centrer les éléments de la liste */
+}
+
+nav ul li {
+    display: inline-block; /* Afficher les éléments en ligne tout en permettant l'alignement centré */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-color: #3498db; /* Bleu clair */
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.hero .btn:hover {
+    background-color: #c0392b;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Conteneur pour les services - Flexbox horizontal */
+.service-container {
+    display: flex;
+    justify-content: space-between; /* Espacement uniforme entre les services */
+    flex-wrap: wrap;
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+.service {
+    text-align: left;
+    width: 30%; /* Largeur de chaque service (3 éléments sur la même ligne) */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+.service p {
+    font-size: 1em;
+    color: #7f8c8d;
+}
+
+.service-images img {
+    width: 100%;
+    height: auto;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about p {
+    font-size: 1.1em;
+    color: #7f8c8d;
+}
+
+#contact p {
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+#contact a:hover {
+    color: #f39c12;
+}
+
+/* Media Queries pour la responsivité */
+
+/* Pour les écrans de plus de 1200px (grands écrans) */
+@media (min-width: 1200px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    .hero h2 {
+        font-size: 3em;
+    }
+
+    .hero p {
+        font-size: 1.5em;
+    }
+
+    .service-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .service {
+        width: 30%; /* Chaque service occupe 30% de la largeur */
+        text-align: center; /* Centrer le texte à l'intérieur du service */
+        display: flex;
+        flex-direction: column; /* Empêcher les éléments (texte, image) de se mettre côte à côte */
+        justify-content: center; /* Centrer les éléments sur l'axe vertical */
+        align-items: center; /* Centrer les éléments horizontalement */
+    }
+
+    .service-images img {
+        width: 100%;
+        height: auto;
+        margin: 5px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        object-fit: cover; /* Garantir que l'image couvre son espace sans déformation */
+    }
+
+    section {
+        padding: 70px 20px;
+    }
+
+    footer {
+        padding: 30px 0;
+    }
+}
+
+/* Pour les écrans de moins de 768px (tablettes et mobiles) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        text-align: left; /* Menu aligné à gauche */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .service-container {
+        flex-direction: column; /* Aligner les services en colonne sur les petits écrans */
+    }
+
+    .service {
+        width: 80%; /* Services plus larges sur les petits écrans */
+    }
+
+    .hero .btn {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}
+
+/* Pour les écrans de moins de 480px (smartphones) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    .service {
+        width: 90%; /* Services encore plus larges sur les très petits écrans */
+        margin: 10px 0;
+    }
+
+    .hero .btn {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
